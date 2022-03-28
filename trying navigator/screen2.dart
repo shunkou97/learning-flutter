@@ -18,18 +18,19 @@ class _Screen2State extends State<Screen2> {
         body: Container(
           child: Column(
             children: [
-              ListTile(
-                  leading: Radio(
-                      value: 0,
-                      groupValue: _selected,
-                      onChanged: (newValue) {
-                        ScaffoldMessenger.of(this.context).showSnackBar(
-                          SnackBar(content: Text("Successfully select 1")),
-                        );
-                        setState(() {
-                          _selected = 0;
-                        });
-                      }),
+              RadioListTile(
+                  subtitle: Text("Test"),
+                  secondary: Icon(Icons.pentagon),
+                  value: 0,
+                  groupValue: _selected,
+                  onChanged: (newValue) {
+                    ScaffoldMessenger.of(this.context).showSnackBar(
+                      SnackBar(content: Text("Successfully select 1")),
+                    );
+                    setState(() {
+                      _selected = 0;
+                    });
+                  },
                   title: Text("Choice 1")),
               ListTile(
                   leading: Radio(
